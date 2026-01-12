@@ -24,7 +24,7 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 -- Yank and P from os reg
 vim.keymap.set("v", "<C-c>", '"+y') -- Copy
 vim.keymap.set("n", "<C-v>", '"+p') -- Paste normal mode
-vim.keymap.set("i", "<C-v>", '<ESC>"+pla') -- Paste insert mode
+vim.keymap.set("i", "<C-v>", '<C-r>+') -- Paste insert mode
 
 
 local minifiles_toggle = function(...)
@@ -33,6 +33,13 @@ local minifiles_toggle = function(...)
 	end
 end
 vim.keymap.set("n", "<C-n>", minifiles_toggle, { noremap = true, silent = true })
+
+
+-- Pohyb mezi okny v Normal i Visual módu
+vim.keymap.set({'n', 'v'}, '<C-h>', '<C-w>h', { desc = 'Pohyb doleva' })
+vim.keymap.set({'n', 'v'}, '<C-j>', '<C-w>j', { desc = 'Pohyb dolů' })
+vim.keymap.set({'n', 'v'}, '<C-k>', '<C-w>k', { desc = 'Pohyb nahoru' })
+vim.keymap.set({'n', 'v'}, '<C-l>', '<C-w>l', { desc = 'Pohyb doprava' })
 
 
 -- vim.keymap.set({ "n", "v" }, "<leader>gh", "<cmd>CopilotChat<cr><esc>")

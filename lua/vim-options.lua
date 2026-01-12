@@ -25,3 +25,11 @@ vim.api.nvim_create_autocmd("TermOpen", {
     vim.opt_local.relativenumber = false
   end,
 })
+
+-- Stop comment newline after commenting
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove({ 'r', 'o' })
+  end,
+})
