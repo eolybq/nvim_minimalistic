@@ -4,7 +4,7 @@ vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
 vim.opt.autoindent = true
-vim.opt.smartindent =  true
+vim.opt.smartindent = false
 vim.opt.smarttab = true
 
 vim.opt.splitright = true
