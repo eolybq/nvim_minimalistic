@@ -13,7 +13,7 @@ return {
             -- 1. Mason Handlers (Automatická konfigurace serverů)
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "pyright", -- Python
+                    "basedpyright", -- Python
                     "clangd",  -- C/C++
                     "lua_ls",  -- Neovim Config
                 },
