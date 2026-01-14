@@ -12,11 +12,6 @@ return {
 
             -- 1. Mason Handlers (Automatická konfigurace serverů)
             require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "basedpyright", -- Python
-                    "clangd",  -- C/C++
-                    "lua_ls",  -- Neovim Config
-                },
                 handlers = {
                     function(server_name)
                         local capabilities = require("cmp_nvim_lsp").default_capabilities()
