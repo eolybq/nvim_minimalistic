@@ -15,6 +15,7 @@ return {
 					},
 					inverse = {
 						match_paren = true, -- Zvýraznění párů závorek
+                        visual = true,
 						search = false, -- Zvýraznění hledání
 					},
 				},
