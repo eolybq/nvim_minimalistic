@@ -13,7 +13,7 @@ vim.opt.relativenumber = true
 vim.o.number = true
 vim.o.cursorline = true
 vim.o.termguicolors = true
--- vim.o.shell = "/usr/bin/fish"
+vim.o.shell = "/opt/homebrew/bin/fish"
 
 -- Highlight on yank
 vim.cmd("au TextYankPost * lua vim.highlight.on_yank {on_visual = true}")
