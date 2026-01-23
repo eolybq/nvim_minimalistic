@@ -9,6 +9,7 @@ vim.opt.smarttab = true
 
 vim.opt.splitright = true
 vim.opt.showmode = false
+vim.opt.showcmd = true
 vim.opt.relativenumber = true
 vim.o.number = true
 vim.o.cursorline = true
