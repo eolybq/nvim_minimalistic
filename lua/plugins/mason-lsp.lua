@@ -22,7 +22,11 @@ return {
                 },
             })
 
-            -- 2. LspAttach (Keymapy jen když běží LSP)
+            -- Globally installed
+            vim.lsp.enable('ruff')
+            vim.lsp.enable('pyright')
+
+            -- LspAttach (Keymapy jen když běží LSP)
             vim.api.nvim_create_autocmd("LspAttach", {
                 group = vim.api.nvim_create_augroup("UserLspConfig", {}),
                 callback = function(ev)
