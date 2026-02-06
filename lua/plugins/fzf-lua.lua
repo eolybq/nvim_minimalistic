@@ -5,6 +5,9 @@ return {
     config = function()
         local fzf = require("fzf-lua")
         fzf.setup({
+            grep = {
+                rg_opts = "--column --line-number --no-heading --color=always --smart-case --max-columns=4096 --hidden --glob '!.git/' --e",
+            },
             keymap = {
                 fzf = {
                     ["ctrl-q"] = "select-all+accept",
